@@ -1,85 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cirela Premium Candles</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <header>
-    <img src="Cirela_Logo_Transparent.png" class="logo" />
-    <h1>CIRELA PREMIUM CANDLES</h1>
-  </header>
-
-  <section class="hero">
-    <h2>Luxury Fragrance. Elegant Living.</h2>
-    <p>Handcrafted premium candles for gifting, decor and soulful ambience.</p>
-  </section>
-
-  <section class="products">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80">
-      <h3>Royal Vanilla</h3>
-      <p>₹499</p>
-      <button onclick="buyNow('Royal Vanilla',499)">Buy Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1602874801006-36b3f9e0c4f3?auto=format&fit=crop&w=800&q=80">
-      <h3>Golden Sandal</h3>
-      <p>₹549</p>
-      <button onclick="buyNow('Golden Sandal',549)">Buy Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80">
-      <h3>French Lavender</h3>
-      <p>₹599</p>
-      <button onclick="buyNow('French Lavender',599)">Buy Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1602526216439-d7b7b2b2c6d1?auto=format&fit=crop&w=800&q=80">
-      <h3>Kesar Supreme</h3>
-      <p>₹699</p>
-      <button onclick="buyNow('Kesar Supreme',699)">Buy Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=800&q=80">
-      <h3>Saffron Elixir</h3>
-      <p>₹749</p>
-      <button onclick="buyNow('Saffron Elixir',749)">Buy Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600375462888-6dca2c5e5c3b?auto=format&fit=crop&w=800&q=80">
-      <h3>Jasmine Essence</h3>
-      <p>₹529</p>
-      <button onclick="buyNow('Jasmine Essence',529)">Buy Now</button>
-    </div>
-
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Phone: +91 9354043042</p>
-    <p>UPI: 8826961053@ptaxis</p>
-  </section>
-
-  <footer>
-    © 2026 Cirela Candles. All rights reserved.
-  </footer>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cirela Candles | Luxury Fragrance</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#faf7f2;color:#333}
+header{background:#111;color:#fff;padding:20px;text-align:center;position:sticky;top:0}
+header h1{letter-spacing:3px}
+nav a{color:#fff;margin:0 15px;text-decoration:none;font-size:14px}
+.hero{height:85vh;background:url('https://images.unsplash.com/photo-1607082350899-7e105aa886ae') center/cover no-repeat;display:flex;justify-content:center;align-items:center;color:#fff;text-align:center}
+.hero h2{font-size:50px;background:rgba(0,0,0,0.5);padding:20px;border-radius:10px}
+section{padding:60px 20px;text-align:center}
+.section-title{font-size:30px;margin-bottom:20px}
+.products{display:flex;flex-wrap:wrap;justify-content:center;gap:25px}
+.card{background:#fff;width:260px;padding:15px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+.card img{width:100%;border-radius:10px;height:200px;object-fit:cover}
+.card h3{margin:10px 0}
+.price{font-weight:600;margin:5px 0}
+.btn{display:inline-block;padding:8px 15px;background:#111;color:#fff;text-decoration:none;border-radius:5px;margin:5px 3px;font-size:14px}
+.about{background:#fff3e6}
+.contact{background:#111;color:#fff}
+input,textarea{width:80%;padding:10px;margin:10px;border-radius:5px;border:none}
+footer{background:#000;color:#aaa;padding:15px;text-align:center}
+@media(max-width:768px){.hero h2{font-size:32px}}
+</style>
 <script>
-function buyNow(product, price){
-  const upi = "upi://pay?pa=8826961053@ptaxis&pn=Cirela%20Candles&am="+price+"&cu=INR&tn=Purchase%20of%20"+product;
-  window.location.href = upi;
+function orderWhatsApp(product,price){
+let phone="919354043042";
+let msg=`Hello, I want to order ${product} candle for ₹${price}. Please confirm availability.`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
+</head>
+
+<body>
+
+<header>
+<h1>CIRELA CANDLES</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#products">Shop</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero">
+<h2>Fill Your Space With Luxury Fragrance</h2>
+</div>
+
+<section id="about" class="about">
+<h2 class="section-title">About Us</h2>
+<p>Cirela Candles creates premium handmade scented candles designed for peace, relaxation, and luxury. Crafted with high-quality wax and long-lasting fragrances for every mood.</p>
+</section>
+
+<section id="products">
+<h2 class="section-title">Our Collection</h2>
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59">
+<h3>Royal Vanilla</h3>
+<div class="price">₹299</div>
+<a class="btn" href="upi://pay?pa=8826961053@ptaxis&pn=Cirela%20Candles&am=299">Buy UPI</a>
+<button class="btn" onclick="orderWhatsApp('Royal Vanilla',299)">WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1607082349566-187342a9e2b3">
+<h3>French Lavender</h3>
+<div class="price">₹349</div>
+<a class="btn" href="upi://pay?pa=8826961053@ptaxis&pn=Cirela%20Candles&am=349">Buy UPI</a>
+<button class="btn" onclick="orderWhatsApp('French Lavender',349)">WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590080875515-8b0f63b29f44">
+<h3>Golden Sandal</h3>
+<div class="price">₹329</div>
+<a class="btn" href="upi://pay?pa=8826961053@ptaxis&pn=Cirela%20Candles&am=329">Buy UPI</a>
+<button class="btn" onclick="orderWhatsApp('Golden Sandal',329)">WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1616627981950-5b7f7f0a9a87">
+<h3>Jasmine Essence</h3>
+<div class="price">₹279</div>
+<a class="btn" href="upi://pay?pa=8826961053@ptaxis&pn=Cirela%20Candles&am=279">Buy UPI</a>
+<button class="btn" onclick="orderWhatsApp('Jasmine Essence',279)">WhatsApp</button>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>📞 +91 93540 43042</p>
+<p>UPI: 8826961053@ptaxis</p>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<br>
+<button class="btn" onclick="alert('We will contact you soon!')">Send Message</button>
+</section>
+
+<footer>
+© 2026 Cirela Candles. All rights reserved.
+</footer>
 
 </body>
 </html>
